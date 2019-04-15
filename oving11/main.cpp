@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <list>
+#include "Person.h"
 
 using namespace std;
 
@@ -44,8 +46,26 @@ void oppg1() {
 	}
 }
 
+void oppg2() {
+	Person tester[] {
+		{ "Jan", "One" },
+		{ "Jan", "Two" },
+		{ "Jan", "Three" },
+		{ "Jan", "Four" },
+		{ "Jan", "Five" },
+		{ "Jan", "Six" },
+		{ "Jan", "Seven" }
+	};
+
+	list<Person> testList;
+
+	for (int i = 0; i < 7; i++) insertOrdered(testList, tester[i]);
+
+	for (auto it = testList.begin(); it != testList.end(); it++) cout << *it << endl;
+}
+
 int main() {
-	oppg1();
+	oppg2();
 
 	cin.get();
 	return 0;
