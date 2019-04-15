@@ -65,7 +65,9 @@ void oppg2() {
 }
 
 int main() {
-	oppg2();
+	unique_ptr<int> tallPtr = make_unique<int>(4);
+
+	cout << tallPtr << ": " << *tallPtr << endl;
 
 	cin.get();
 	return 0;
