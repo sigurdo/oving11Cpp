@@ -46,7 +46,7 @@ void oppg1() {
 	}
 }
 
-int main() {
+void oppg2() {
 	Person tester[] {
 		{ "Jan", "One" },
 		{ "Jan", "Two" },
@@ -62,6 +62,10 @@ int main() {
 	for (int i = 0; i < 7; i++) insertOrdered(testList, tester[i]);
 
 	for (auto it = testList.begin(); it != testList.end(); it++) cout << *it << endl;
+}
+
+int main() {
+	oppg2();
 
 	cin.get();
 	return 0;
