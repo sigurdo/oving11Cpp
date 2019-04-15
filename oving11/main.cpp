@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <set>
+#include "Person.h"
 
 using namespace std;
 
@@ -45,7 +46,7 @@ void oppg1() {
 }
 
 int main() {
-	oppg1();
+	Person test1{ "Jan", "Ove" };
 
 	cin.get();
 	return 0;
