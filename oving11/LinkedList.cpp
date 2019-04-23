@@ -26,3 +26,16 @@ LinkedList::Node* LinkedList::LinkedList::insert(Node* pos, const std::string& v
 		return pos->prev;
 	}
 }
+
+LinkedList::Node* LinkedList::LinkedList::remove(Node* pos) {
+	if (pos == head.get()) {
+		head = std::move(head->next);
+		head->prev = nullptr;
+
+		return head.get();
+	}
+
+	else {
+
+	}
+}
