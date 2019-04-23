@@ -12,13 +12,17 @@ LinkedList::Node* LinkedList::LinkedList::insert(Node* pos, const std::string& v
 	//auto s2 = std::make_unique<Node>(value, pos, pos->getPrev());
 	//return s2.get(); 
 
-	/*if (pos == head.get()) {
-		
+	if (pos == head.get()) {
+		head = std::make_unique<Node>(value, std::move(head), nullptr);
+		head->next->prev = head.get();
+
+		return head.get();
 	}
 
-	else {*/
+	else {
 		pos->prev->next = std::make_unique<Node>(value, std::move(pos->prev->next), pos->prev);
 		pos->prev = pos->prev->next.get();
+
 		return pos->prev;
-	//}
+	}
 }

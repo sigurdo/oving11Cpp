@@ -4,6 +4,7 @@
 #include <set>
 #include <list>
 #include "Person.h"
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -64,8 +65,19 @@ void oppg2() {
 	for (auto it = testList.begin(); it != testList.end(); it++) cout << *it << endl;
 }
 
+void oppg3() {
+	LinkedList::LinkedList list1;
+	string str = "Halla";
+	LinkedList::Node* val1 = list1.insert(list1.begin(), str);
+	str = "Halla2";
+	LinkedList::Node* val2 = list1.insert(list1.begin(), str);
+
+	cout << val1->getValue() << endl;
+	cout << val2->getValue() << endl;
+}
+
 int main() {
-	oppg2();
+	oppg3();
 
 	cin.get();
 	return 0;
