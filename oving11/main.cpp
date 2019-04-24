@@ -70,7 +70,7 @@ void oppg2() {
 }
 
 void oppg3() {
-	LinkedList::LinkedList list1;
+	/*LinkedList::LinkedList list1;
 	string str = "Halla";
 	LinkedList::Node* val1 = list1.insert(list1.begin(), str);
 	str = "Halla2";
@@ -97,7 +97,7 @@ void oppg3() {
 	*/
 }
 
-void oppg4() {
+/*void oppg4() {
 	cout << maximum<int>(3, 5) << endl;
 	cout << maximum<char>('a', 'A') << endl;
 
@@ -118,10 +118,40 @@ void oppg4() {
 
 	shuffle(pers);
 	cout << pers << endl;
+}*/
+
+void oppg5() {
+	LinkedList::LinkedList<int> list1;
+	int str = 1;
+	LinkedList::Node<int>* val1 = list1.insert(list1.begin(), str);
+	str = 2;
+	LinkedList::Node<int>* val2 = list1.insert(list1.begin(), str);
+	str = 30;
+	LinkedList::Node<int>* val3 = list1.insert(list1.begin(), str);
+	str = 34;
+	LinkedList::Node<int>* val4 = list1.insert(list1.begin(), str);
+	str = 35;
+	LinkedList::Node<int>* val5 = list1.insert(list1.begin(), str);
+
+	list1.remove(val2);
+	list1.remove(3);
+	list1.remove(100);
+
+	cout << list1 << endl;
+
+	cout << list1.find(1)->getValue() << endl;
+
+	/*
+		b)
+			For at en datatype skal kunne brukes av LinkedList må den ha sammenlikningsoperator == fordi ellers ville vi fått feilmelding ved å anvende metodene find() og remove(T&).
+			Den må også være definert for ostream operatoren << fordi hvis ikke får vi feilmelding på operatoren << anvendt på lista.
+	*/
 }
 
 int main() {
 	srand(time(nullptr));
+
+	oppg5();
 
 	cin.get();
 	return 0;
