@@ -123,8 +123,6 @@ void oppg4() {
 int main() {
 	srand(time(nullptr));
 
-	oppg4();
-
 	cin.get();
 	return 0;
 }
