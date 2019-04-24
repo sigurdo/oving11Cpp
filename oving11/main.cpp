@@ -85,6 +85,12 @@ void oppg3() {
 	cout << list1 << endl;
 
 	cout << list1.find("Halla")->getValue() << endl;
+
+	/*
+		b)
+			Lenkede lister er bedre fordi at når du legger til flere elementer så slipper du å flytte på alle elementene som lå der fra før av. Arrays kalles tabeller på norsk fordi de er basert på å ha en forhåndsdefinert størrelse, akkurat som vanlige tabeller. Det samme gjelder vector.
+			Hvis jeg nå skulle laget en stack eller queue ville jeg lagd en ny klasse som arvet fra LinkedList og som er en linked list, bare med pop og push funksjoner som tar seg av innholdsadministrasjon.
+	*/
 }
 
 int main() {
