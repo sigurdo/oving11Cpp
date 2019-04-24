@@ -4,6 +4,7 @@
 #include <set>
 #include <list>
 #include "Person.h"
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -64,8 +65,36 @@ void oppg2() {
 	for (auto it = testList.begin(); it != testList.end(); it++) cout << *it << endl;
 }
 
+void oppg3() {
+	LinkedList::LinkedList list1;
+	string str = "Halla";
+	LinkedList::Node* val1 = list1.insert(list1.begin(), str);
+	str = "Halla2";
+	LinkedList::Node* val2 = list1.insert(list1.begin(), str);
+	str = "Halla3";
+	LinkedList::Node* val3 = list1.insert(list1.begin(), str);
+	str = "Halla4";
+	LinkedList::Node* val4 = list1.insert(list1.begin(), str);
+	str = "Halla5";
+	LinkedList::Node* val5 = list1.insert(list1.begin(), str);
+
+	list1.remove(val2);
+	list1.remove("Halla3");
+	list1.remove("Hallaaa");
+
+	cout << list1 << endl;
+
+	cout << list1.find("Halla")->getValue() << endl;
+
+	/*
+		b)
+			Lenkede lister er bedre fordi at når du legger til flere elementer så slipper du å flytte på alle elementene som lå der fra før av. Arrays kalles tabeller på norsk fordi de er basert på å ha en forhåndsdefinert størrelse, akkurat som vanlige tabeller. Det samme gjelder vector.
+			Hvis jeg nå skulle laget en stack eller queue ville jeg lagd en ny klasse som arvet fra LinkedList og som er en linked list, bare med pop og push funksjoner som tar seg av innholdsadministrasjon.
+	*/
+}
+
 int main() {
-	oppg2();
+	oppg3();
 
 	cin.get();
 	return 0;
