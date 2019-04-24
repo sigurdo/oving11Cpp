@@ -36,9 +36,19 @@ LinkedList::Node* LinkedList::LinkedList::remove(Node* pos) {
 	}
 
 	else {
-		pos->prev->next = std::move(pos->next);
 		pos->next->prev = pos->prev;
+		pos->prev->next = std::move(pos->next);
 
 		return pos->next.get();
 	}
+}
+
+std::ostream & LinkedList::operator<<(std::ostream & os, const LinkedList& list) {
+	Node* pos = list.head.get();
+	while (pos != list.tail) {
+		os << pos->getValue() << std::endl;
+		pos = pos->getNext();
+	}
+
+	return os;
 }

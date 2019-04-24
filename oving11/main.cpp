@@ -73,12 +73,15 @@ void oppg3() {
 	LinkedList::Node* val2 = list1.insert(list1.begin(), str);
 	str = "Halla3";
 	LinkedList::Node* val3 = list1.insert(list1.begin(), str);
+	str = "Halla4";
+	LinkedList::Node* val4 = list1.insert(list1.begin(), str);
+	str = "Halla5";
+	LinkedList::Node* val5 = list1.insert(list1.begin(), str);
 
+	list1.remove(val2);
 	list1.remove(val3);
 
-	cout << val1->getValue() << endl;
-	cout << val2->getValue() << endl;
-	//cout << val3->getValue() << endl;
+	cout << list1 << endl;
 }
 
 int main() {
