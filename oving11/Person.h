@@ -3,6 +3,8 @@
 #include <string>
 #include <list>
 
+#include "Person.h"
+
 using namespace std;
 
 class Person
@@ -19,4 +21,6 @@ public:
 	friend void insertOrdered(list<Person>& l, const Person& p);
 
 	friend ostream& operator<<(ostream&, Person&);
+
+	friend bool operator>(Person& pers1, Person& pers2);
 };

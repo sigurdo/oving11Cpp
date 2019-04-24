@@ -28,3 +28,7 @@ ostream& operator<<(ostream& out, Person& pers) {
 
 	return out;
 }
+
+bool operator>(Person& pers1, Person& pers2) {
+	return pers1.fulltNavn() > pers2.fulltNavn();
+}

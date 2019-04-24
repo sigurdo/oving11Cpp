@@ -5,6 +5,7 @@
 #include <list>
 #include "Person.h"
 #include "LinkedList.h"
+#include "functionTemplates.h"
 
 using namespace std;
 
@@ -93,7 +94,20 @@ void oppg3() {
 	*/
 }
 
+void oppg4() {
+	cout << maximum<int>(3, 5) << endl;
+	cout << maximum<char>('a', 'A') << endl;
+
+	Person pers1{ "Fettmann", "Bollerud" };
+	Person pers2{ "Fettdame", "Bollesen" };
+
+	Person pers3 = maximum<Person>(pers1, pers2);
+	cout << pers3 << endl;
+}
+
 int main() {
+	oppg4();
+
 	cin.get();
 	return 0;
 }
