@@ -27,6 +27,15 @@ LinkedList::Node* LinkedList::LinkedList::insert(Node* pos, const std::string& v
 	}
 }
 
+LinkedList::Node* LinkedList::LinkedList::find(const std::string& value) {
+	Node* pos = head.get();
+	while (pos != tail) {
+		if (pos->getValue() == value) return pos;
+		pos = pos->getNext();
+	}
+	return pos;
+}
+
 LinkedList::Node* LinkedList::LinkedList::remove(Node* pos) {
 	if (pos == head.get()) {
 		head = std::move(head->next);

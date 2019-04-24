@@ -82,6 +82,8 @@ void oppg3() {
 	list1.remove(val3);
 
 	cout << list1 << endl;
+
+	cout << list1.find("Halla")->getValue() << endl;
 }
 
 int main() {
