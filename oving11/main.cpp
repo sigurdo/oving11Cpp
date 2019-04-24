@@ -94,8 +94,6 @@ void oppg3() {
 }
 
 int main() {
-	oppg3();
-
 	cin.get();
 	return 0;
 }
