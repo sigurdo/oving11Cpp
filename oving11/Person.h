@@ -3,8 +3,6 @@
 #include <string>
 #include <list>
 
-#include "Person.h"
-
 using namespace std;
 
 class Person

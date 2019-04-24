@@ -121,7 +121,6 @@
     <ClCompile Include="LinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="functionTemplates.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Person.h" />
   </ItemGroup>

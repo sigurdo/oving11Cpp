@@ -3,9 +3,12 @@
 #include <vector>
 #include <set>
 #include <list>
+#include <random>
+#include <time.h>
+
 #include "Person.h"
 #include "LinkedList.h"
-#include "functionTemplates.h"
+#include "functionTemplates.cpp"
 
 using namespace std;
 
@@ -103,9 +106,23 @@ void oppg4() {
 
 	Person pers3 = maximum<Person>(pers1, pers2);
 	cout << pers3 << endl;
+
+	vector<Person> pers{
+		Person{"Osama", "Bin Laden"},
+		Person{"Osama", "Bin Laban"},
+		Person{"Marme", "Laden"},
+		Person{"Glemteå", "Laden"},
+		Person{"Hvorvardetjeg", "Laden"}
+	};
+	cout << endl << pers << endl;
+
+	shuffle(pers);
+	cout << pers << endl;
 }
 
 int main() {
+	srand(time(nullptr));
+
 	oppg4();
 
 	cin.get();
