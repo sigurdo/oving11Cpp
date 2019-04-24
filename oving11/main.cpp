@@ -79,7 +79,8 @@ void oppg3() {
 	LinkedList::Node* val5 = list1.insert(list1.begin(), str);
 
 	list1.remove(val2);
-	list1.remove(val3);
+	list1.remove("Halla3");
+	list1.remove("Hallaaa");
 
 	cout << list1 << endl;
 

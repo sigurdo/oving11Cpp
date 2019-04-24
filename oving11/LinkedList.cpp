@@ -52,6 +52,11 @@ LinkedList::Node* LinkedList::LinkedList::remove(Node* pos) {
 	}
 }
 
+void LinkedList::LinkedList::remove(const std::string& value) {
+	Node* pos = find(value);
+	if (pos != tail) remove(pos);
+}
+
 std::ostream & LinkedList::operator<<(std::ostream & os, const LinkedList& list) {
 	Node* pos = list.head.get();
 	while (pos != list.tail) {
