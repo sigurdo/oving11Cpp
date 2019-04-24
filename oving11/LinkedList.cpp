@@ -36,6 +36,9 @@ LinkedList::Node* LinkedList::LinkedList::remove(Node* pos) {
 	}
 
 	else {
+		pos->prev->next = std::move(pos->next);
+		pos->next->prev = pos->prev;
 
+		return pos->next.get();
 	}
 }
